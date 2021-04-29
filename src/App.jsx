@@ -1,13 +1,25 @@
-import React from "react";
-import GlobalStyles from "./styles/global";
+import React from 'react';
+import GlobalStyles from './styles/global';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
+import { ThemeProvider } from 'styled-components';
+import { ToastContainer } from 'react-toastify';
+import { AuthContext } from './context/auth';
+import theme from './styles/themes';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-	return (
-		<div>
-			<h1>Hello World</h1>
-			<GlobalStyles />
-		</div>
-	);
+  return (
+    <AuthContext>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Routes />
+          <ToastContainer />
+        </ThemeProvider>
+      </BrowserRouter>
+    </AuthContext>
+  );
 };
 
 export default App;
