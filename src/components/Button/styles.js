@@ -19,7 +19,7 @@ export const StyledButton = styled(Button)`
         variant === 'filled'
           ? css`
               background: ${theme.colors.backgroundColor};
-              color: ${theme.colors.white};
+              color: ${theme.colors.grey};
               &:hover {
                 background: ${theme.colors.primaryColor};
                 color: ${theme.colors.white};
@@ -32,15 +32,14 @@ export const StyledButton = styled(Button)`
               border-color: ${theme.colors.backgroundColor};
               &:hover {
                 background: ${theme.colors.backgroundColor};
-                color: ${theme.colors.white};
+                color: ${theme.colors.grey};
               }
             `
           : css`
-              cursor: not-allowed;
-              pointer-events: all !important;
-              background-color: ${theme.colors.lightestGrey};
+              background-color: ${theme.colors.fail};
+              color: ${theme.colors.white};
               &&:hover {
-                background-color: ${theme.colors.lightestGrey};
+                background-color: ${theme.colors.lightFail};
               }
             `}
     }

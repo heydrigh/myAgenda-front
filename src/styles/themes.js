@@ -9,6 +9,7 @@ const theme = {
     lightGreen: '#b3ffab',
     success: '#1AC88D',
     fail: '#FF4040',
+    lightFail: '#ff0033',
     warn: '#F2CF01',
     grey: '#6B6B6B',
     darkGrey: '#606060',
