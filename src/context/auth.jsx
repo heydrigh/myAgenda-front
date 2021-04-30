@@ -28,7 +28,7 @@ function AuthContext({ children }) {
     setIsAuth(false);
   }, []);
 
-  const logIn = useCallback(async ({ email, password }, isChecked) => {
+  const logIn = useCallback(async ({ email, password }) => {
     try {
       const response = await api.post('/sessions', {
         email,
@@ -39,10 +39,7 @@ function AuthContext({ children }) {
       const user = response.data.user;
 
       localStorage.setItem('@MyAgenda:user', JSON.stringify(user));
-
-      if (isChecked) {
-        localStorage.setItem('@MyAgenda:token', token);
-      }
+      localStorage.setItem('@MyAgenda:token', token);
 
       setData({ token, user });
 

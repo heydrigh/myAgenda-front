@@ -1,15 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-    * {
+      * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
   }
   #root{
-    display: flex;
-    justify-content:center;
+
     a{
       text-decoration: none;
     }
@@ -17,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   html, body {
-    height: 100%;
+
     font-size: 62.5%;
   }
   body {
@@ -35,6 +38,10 @@ const GlobalStyles = createGlobalStyle`
   }
   button {
     cursor: pointer;
+  }
+
+  .Toastify__toast-container {
+    font-size:1.2rem;
   }
 `;
 
